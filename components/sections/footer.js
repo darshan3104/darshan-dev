@@ -13,7 +13,7 @@ export default function Footer() {
                     </div>
 
                     <p className="text-muted-foreground text-sm text-center md:text-right">
-                        Built with <span className="text-red-500">❤️</span> by Darshan.dev
+                        Built with <span className="text-lime-500"> by Darshan.dev</span>
                         <br />
                         <span className="text-xs opacity-50">© {new Date().getFullYear()} All rights reserved.</span>
                     </p>

@@ -72,12 +72,7 @@ export default function Contact() {
                         </div>
 
                         {/* Map or Decorative Element */}
-                        <div className="relative h-64 rounded-2xl overflow-hidden border border-primary/20 bg-card/50">
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="text-muted-foreground">Map Visualization Placeholder</span>
-                            </div>
-                        </div>
+                        
                     </motion.div>
 
                     {/* Contact Form */}

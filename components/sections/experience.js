@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, GraduationCap } from "lucide-react";
+import Squares from "../Squares";
 
 const experience = [
     {
@@ -33,10 +34,10 @@ const experience = [
     {
         type: "hacathon",
         title: "Lovix AI - An AI code editor System",
-        company: "Hackathon",
+        company: "Hubby",
         period: "2025 - Present",
         description: "A smart, intelligent, and context-aware AI-powered code editor for faster, cleaner, and more intuitive software development.",
-        skills: ["Machine ", "Algorithms", "System Design"]
+        skills: [ "Node.js", "PostgreSQL", "Redis", "Next.js", "Tailwind CSS", "TypeScript", "Git"  ]
     }
 ];
 
@@ -49,9 +50,6 @@ export default function Experience() {
 
     return (
         <section id="experience" ref={containerRef} className="py-20 bg-background relative overflow-hidden">
-            {/* Background Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent -translate-x-1/2 hidden md:block" />
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

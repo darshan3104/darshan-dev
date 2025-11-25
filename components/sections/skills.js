@@ -6,6 +6,7 @@ import {
     Code2, Database, Layout, Server, Smartphone, Terminal,
     Cpu, Globe, Layers, Box
 } from "lucide-react";
+import Hyperspeed from "../Hyperspeed";
 
 const skills = [
     {
@@ -26,14 +27,66 @@ const skills = [
     {
         category: "DevOps",
         icon: Box,
-        items: ["Docker", "AWS", "CI/CD", "Git", "Linux"],
+        items: ["Docker", "CI/CD", "Git", "Linux"],
     },
 ];
 
 export default function Skills() {
     return (
         <section id="skills" className="py-20 bg-background/50 relative">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                <Hyperspeed
+                    effectOptions={{
+                        onSpeedUp: () => { },
+                        onSlowDown: () => { },
+                        distortion: 'turbulentDistortion',
+                        length: 400,
+                        roadWidth: 10,
+                        islandWidth: 1,
+                        lanesPerRoad: 4,
+                        fov: 90,
+                        fovSpeedUp: 150,
+                        speedUp: 2,
+                        carLightsFade: 0.4,
+                        totalSideLightSticks: 20,
+                        lightPairsPerRoadWay: 40,
+                        shoulderLinesWidthPercentage: 0.02,
+                        brokenLinesWidthPercentage: 0.02,
+                        brokenLinesLengthPercentage: 0.5,
+                        lightStickWidth: [0.12, 0.5],
+                        lightStickHeight: [1.3, 1.7],
+                        movingAwaySpeed: [60, 80],
+                        movingCloserSpeed: [-120, -160],
+                        carLightsLength: [400 * 0.03, 400 * 0.2],
+                        carLightsRadius: [0.02, 0.14],
+                        carWidthPercentage: [0.1, 0.2],
+                        carShiftX: [-0.8, 0.8],
+                        carFloorSeparation: [0, 5],
+                        colors: {
+                            roadColor: 0x000000,          // Pure black
+                            islandColor: 0x0A0A0A,        // Slight dark grey (near black)
+                            background: 0x000000,         // Black background
+
+                            shoulderLines: 0xCCFF00,      // Lime yellow-green
+                            brokenLines: 0x99FF33,        // Brighter lime variant
+
+                            leftCars: [
+                                0x00FF66, // Neon green
+                                0x33FF99, // Soft lime green
+                                0x66FF33  // Bright lime
+                            ],
+                            rightCars: [
+                                0x00CC44, // Deep green
+                                0x009933, // Darker neon green
+                                0x003300  // Deep forest green
+                            ],
+
+                            sticks: 0x99FF33, // Lime sticks
+                        }
+                    }}
+                />
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +111,7 @@ export default function Skills() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <Card className="h-full bg-card border-primary/10 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 group">
+                            <Card className="h-full bg-transparent border-primary/10 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 group">
                                 <CardContent className="p-6">
                                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                                         <skill.icon className="w-6 h-6 text-primary" />

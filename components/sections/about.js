@@ -86,7 +86,7 @@ export default function About() {
                             <h3 className="text-2xl font-semibold border-b border-primary/20 pb-2 inline-block">My Projects</h3>
                             <div className="relative pl-8 border-l-2 border-primary/20 space-y-10">
                                 {[
-                                    { year: "2025", title: "AI - Powered Research Paper ", desc: "AI-ML Research" },
+                                    { year: "2025", title: "AI - Powered Research Paper Summarizer", desc: "AI-ML Research" },
                                     { year: "2024", title: "Phishing Detection System", desc: "Cybersecurity" },
                                     { year: "2024", title: "Decentralized Identity and Credential Verification System", desc: "Blockchain" },
                                 ].map((item, index) => (

@@ -65,21 +65,25 @@ export default function Hero() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                        <Button variant="neon" size="lg" className="w-full sm:w-auto text-base group">
-                            View My Work
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <Button variant="neon" size="lg" className="w-full sm:w-auto text-base group" asChild>
+                            <a href="#experience">
+                                View My Work
+                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </a>
                         </Button>
-                        <Button variant="outline" size="lg" className="w-full sm:w-auto text-base">
-                            Download CV
-                            <Download className="ml-2 h-4 w-4" />
+                        <Button variant="outline" size="lg" className="w-full sm:w-auto text-base" asChild>
+                            <a href="/Darshan Resume  (1).pdf" download="Darshan_Resume.pdf">
+                                Download CV
+                                <Download className="ml-2 h-4 w-4" />
+                            </a>
                         </Button>
                     </div>
 
                     <div className="flex items-center justify-center gap-6">
-                        {[Github, Linkedin, Twitter].map((Icon, index) => (
+                        {[[Github, "https://github.com/darshan3104"], [Linkedin, "https://www.linkedin.com/in/darshan-r-857057250"]].map(([Icon, href], index) => (
                             <motion.a
                                 key={index}
-                                href="#"
+                                href={href}
                                 whileHover={{ scale: 1.1, color: "#A3E635" }}
                                 className="text-muted-foreground transition-colors"
                             >

@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users } from "lucide-react";
 import { GridScan } from "../GridScan";
+import Image from "next/image";
 
 export default function About() {
     return (
@@ -49,10 +49,13 @@ export default function About() {
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                             <CardContent className="p-8">
                                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-6 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
-                                    {/* Placeholder for Profile Image */}
-                                    <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center text-muted-foreground">
-                                        <Users className="w-20 h-20 opacity-20" />
-                                    </div>
+                                    <Image
+                                        src="/profile.jpg"
+                                        alt="Darshan R - Profile Picture"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
                                 </div>
                             </CardContent>
                         </Card>

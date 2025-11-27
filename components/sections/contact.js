@@ -93,9 +93,9 @@ export default function Contact() {
                     >
                         <div className="grid gap-6">
                             {[
-                                { icon: Mail, title: "Email", value: "hello@darshan.dev", href: "mailto:hello@darshan.dev" },
-                                { icon: Phone, title: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-                                { icon: MapPin, title: "Location", value: "San Francisco, CA", href: "#" }
+                                { icon: Mail, title: "Email", value: "darshanravi0804@gmail.com", href: "mailto:darshanravi0804@gmail.com" },
+                                { icon: Phone, title: "Phone", value: "+91 8660011466", href: "tel:+918660011466" },
+                                { icon: MapPin, title: "Location", value: "Bengaluru, Karnataka, India", href: "#" }
                             ].map((item, index) => (
                                 <Card key={index} className="bg-card/50 border-primary/10 hover:border-primary/30 transition-colors">
                                     <CardContent className="p-6 flex items-center gap-4">

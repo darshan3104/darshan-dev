@@ -72,7 +72,7 @@ export default function Hero() {
                             </a>
                         </Button>
                         <Button variant="outline" size="lg" className="w-full sm:w-auto text-base" asChild>
-                            <a href="/Darshan Resume  (1).pdf" download="Darshan_Resume.pdf">
+                            <a href="/Darshan Resume.pdf" download="Darshan_Resume.pdf">
                                 Download CV
                                 <Download className="ml-2 h-4 w-4" />
                             </a>

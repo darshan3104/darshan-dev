@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, GraduationCap } from "lucide-react";
-import Squares from "../Squares";
+import PixelBlast from "../ui/pixel-blast";
 
 const experience = [
     {
-        type: "mini-project",
+        type: "Mini Project",
         title: "Decentralized Identity and Credential Verification System",
         company: "Mini Project",
         period: "2024 - Present",
@@ -16,7 +16,7 @@ const experience = [
         skills: ["Next.js", "Node.js", "PostgreSQL", "Redux", "Solidity", "Web3.js", "MetaMask", "Ethereum"]
     },
     {
-        type: "hubby",
+        type: "Hubby",
         title: "Phishing Detection System",
         company: "Hubby",
         period: "2024 - 2025",
@@ -24,7 +24,7 @@ const experience = [
         skills: ["React", "Node.js", "PostgreSQL", "Redis", "Next.js", "Tailwind CSS", "TypeScript", "Git"  ]
     },
     {
-        type: "hacathon",
+        type: "Hackathon",
         title: "AI - Powered Research Paper Summarizer",
         company: "Hackathon",
         period: "2024 - 2025",
@@ -32,7 +32,7 @@ const experience = [
         skills: ["Machine Learning", "Algorithms", "System Design"]
     },
     {
-        type: "hacathon",
+        type: "Hubby",
         title: "Lovix AI - An AI code editor System",
         company: "Hubby",
         period: "2025 - Present",
@@ -50,6 +50,20 @@ export default function Experience() {
 
     return (
         <section id="experience" ref={containerRef} className="py-20 bg-background relative overflow-hidden">
+            <div className="absolute inset-0 z-0">
+                <PixelBlast
+                    variant="square"
+                    pixelSize={24}
+                    color="#A3E635"
+                    patternScale={10}
+                    patternDensity={1}
+                    speed={0.3}
+                    enableRipples={true}
+                    rippleIntensityScale={9}
+                    rippleSpeed={0.5}
+                    edgeFade={0.2}
+                />
+            </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
